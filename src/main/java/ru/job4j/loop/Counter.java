@@ -5,7 +5,6 @@ public class Counter {
         int sum = 0;
         for (int index = start; index <= finish; index++) {
             sum += index;
-
         }
         return sum;
     }
@@ -16,3 +15,4 @@ public class Counter {
         System.out.println(sum(1, 1));
     }
 }
+
