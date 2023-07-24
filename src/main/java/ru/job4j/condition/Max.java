@@ -1,13 +1,20 @@
 package ru.job4j.condition;
 
 public class Max {
-    public static int max(int left, int right) {
-        int result = left >= right ? left : right;
-        return result;
+    public int max(int a, int b) {
+        return a > b ? a : b;
+    }
+
+    public int max(int a, int b, int c) {
+        return a > max(b, c) ? a : max(b, c);
+    }
+
+    public int max(int a, int b, int c, int d) {
+        return a > max(b, c, d) ? a : max(b, c, d);
     }
 
     public static void main(String[] args) {
-        int maxNumber = max(1, 2);
-        System.out.println("Максимальное чилсло = " + maxNumber);
+        Max maxNumber = new Max();
+        System.out.println("Максимальное чилсло = " + maxNumber.max(1, 2));
     }
 }
