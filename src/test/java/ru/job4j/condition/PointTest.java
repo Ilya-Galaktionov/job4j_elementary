@@ -25,6 +25,15 @@ public class PointTest {
     }
 
     @Test
+    public void when053To313Then5() {
+        Point start = new Point(0, 5, 3);
+        Point end = new Point(3, 1, 3);
+        double expected = 5;
+        double out = start.distance3d(end);
+        assertEquals(expected, out, 0.01);
+    }
+
+    @Test
     public void when100To20Then8() {
         Point start = new Point(10, 0);
         Point end = new Point(2, 0);
